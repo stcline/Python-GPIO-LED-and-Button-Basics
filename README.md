@@ -24,9 +24,9 @@ Each student or group needs:
 - Breadboard
 - Jumper wires
 - 1 LED
-- 1 resistor for the LED, typically 220–330 ohms.
+- 2 resistors for the LED and the button, typically 220–330 ohms.
 - 1 pushbutton
-- SSH access through PuTTY or VS Code Remote-SSH.
+- SSH access through PuTTY, the Command Prompt or VS Code Remote-SSH.
 
 ## Safety first
 
@@ -83,16 +83,19 @@ After the LED is wired and checked, wire the pushbutton.
 
 1. Place the pushbutton so it bridges the center gap of the breadboard if needed.
 2. Connect one side of the button to 3.3 V.
-3. Connect the other side of the button to GPIO 27.
-4. In software, use an internal pull-down resistor so the pin reads LOW when the button is not pressed and HIGH when it is pressed.  
+3. Connect the other side of the button to GPIO 27 through the resistor:
+
+   `3.3V -> button -> resistor -> GPIO 27`
+
+5. In software, use an internal pull-down resistor so the pin reads LOW when the button is not pressed and HIGH when it is pressed.  
 
 This lesson does **not** use 5 V for the button circuit. Using 3.3 V keeps the input level appropriate for Raspberry Pi GPIO pins.  
 
 ## Recommended workflow
 
-1. SSH into your Raspberry Pi using PuTTY or VS Code Remote-SSH. 
-2. Open the GitHub repository for this lesson or clone it if needed. 
-3. Create a folder for this assignment, such as `gpio_intro`.
+1. SSH into your Raspberry Pi using PuTTY or VS Code Remote-SSH. Navigate to your "Pi Projects" directory.
+2. Open the GitHub repository for this lesson or clone it to the current directory. 
+3. Create a directory for this assignment, such as `gpio_intro`.
 4. Build and check the circuit before running code.
 5. Write, test, and revise each Python program one at a time.
 6. Commit and push your work when each part functions correctly. 
@@ -231,7 +234,6 @@ Your `NOTES.md` file should include:
 - Your name and class period
 - The BCM pins you used
 - A short reflection on safety and troubleshooting
-- A sketch or photo of your wiring, if your teacher requests it
 
 ## Stretch ideas
 
