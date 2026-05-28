@@ -55,7 +55,7 @@ Use the same pins for the whole class to reduce confusion.
 | Purpose | Pin name in code | BCM pin number | Notes |
 |---|---|---:|---|
 | LED output | `LED_PIN` | 17 | A common starter output pin.   |
-| Button input | `BUTTON_PIN` | 27 | A common starter input pin.   |
+| Button input | `BUTTON_PIN` | 27 | A common starter input pin. To be safe, wire a 220 Ohm resistor in the circuit with the button pin.   |
 | Ground | GND | n/a | Used for the LED return path.  |
 | Power for button | 3.3 V | n/a | Use 3.3 V, not 5 V, for this lesson.   |
 
